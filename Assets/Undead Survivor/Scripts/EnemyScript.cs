@@ -7,25 +7,35 @@ public class EnemyScript : MonoBehaviour
     
     public Rigidbody2D target;
     public float Speed;
-    bool IsLive = true;
-    Rigidbody2D rb;
-    SpriteRenderer sr;
+    public float Health;
+    public float MaxHealth;
+    public RuntimeAnimatorController[] rac;
+
+    WaitForFixedUpdate wait;
+    bool IsLive;
+    Rigidbody2D Rigid;
+    SpriteRenderer Sprite;
+    Animator Anim;
+    Collider2D Coll;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        Rigid = GetComponent<Rigidbody2D>();
+        Sprite = GetComponent<SpriteRenderer>();
+        Anim = GetComponent<Animator>();
+        Coll = GetComponent<Collider2D>();
+        wait = new WaitForFixedUpdate();
     }
 
     void FixedUpdate()
     {
-        if (!(IsLive))
+        if (!(IsLive) || Anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
 
-        Vector2 Direction = target.position - rb.position;
+        Vector2 Direction = target.position - Rigid.position;
         Vector2 TargetLocation = Direction.normalized * Speed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + TargetLocation);
-        rb.velocity = Vector2.zero;
+        Rigid.MovePosition(Rigid.position + TargetLocation);
+        Rigid.velocity = Vector2.zero;
     }
 
     private void LateUpdate()
@@ -33,7 +43,7 @@ public class EnemyScript : MonoBehaviour
         if (!(IsLive))
             return;
 
-        sr.flipX = target.position.x < rb.position.x;
+        Sprite.flipX = target.position.x < Rigid.position.x;
     }
 
     void SetTarget() 
@@ -44,5 +54,56 @@ public class EnemyScript : MonoBehaviour
     void OnEnable()
     {
         SetTarget();
+        IsLive = true;
+        Health = MaxHealth;
+        Coll.enabled = true;
+        Rigid.simulated = true;
+        Sprite.sortingOrder = 2;
+        Anim.SetBool("Dead", false);
+    }
+
+    public void Init(SpawnData NewData) 
+    {
+        Speed = NewData.Speed;
+        MaxHealth = NewData.Health;
+        Anim.runtimeAnimatorController = rac[NewData.MonsterType];
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Bullet") || !IsLive)
+            return;
+
+        Health -= collision.gameObject.GetComponent<BulletScript>().Damage;
+
+        StartCoroutine(Knockback());
+
+        if (Health <= 0.0f)
+        {
+            IsLive = false;
+            Coll.enabled = false;
+            Rigid.simulated = false;
+            Sprite.sortingOrder = 1;
+            Anim.SetBool("Dead", true);
+            GameManager.Instance.Kill++;
+            GameManager.Instance.AddExp();
+        }
+        else 
+        {
+            Anim.SetTrigger("Hit");
+        }
+    }
+
+    IEnumerator Knockback() 
+    {
+        yield return wait;
+        Vector3 PlayerPosition = GameManager.Instance.Player.transform.position;
+        Vector3 Dir = transform.position - PlayerPosition;
+        Rigid.AddForce(Dir.normalized * 5, ForceMode2D.Impulse);
+    }
+
+    void DoDeath() 
+    {
+        gameObject.SetActive(false);
     }
 }

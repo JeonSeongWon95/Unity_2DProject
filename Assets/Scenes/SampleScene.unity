@@ -307,7 +307,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.277778
+  orthographic size: 8.611111
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -332,7 +332,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 3.42, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -502,6 +502,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554619355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &582333973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 582333974}
+  - component: {fileID: 582333975}
+  m_Layer: 0
+  m_Name: Weapon_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &582333974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582333973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1111410991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &582333975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582333973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1039aa10984c257468224ceee9dadb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 0
+  PrefabsId: 1
+  Count: 0
+  Damage: 8
+  Speed: 0
 --- !u!1 &668120511
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,8 +690,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587abef01620aac4498ac37dbc650a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameTime: 0
+  MaxGameTime: 0
   Player: {fileID: 1111410993}
-  EnemyPool: {fileID: 1015634042}
+  Pool: {fileID: 1015634042}
+  Level: 0
+  Exp: 0
+  Kill: 0
+  NextExp: 0300000005000000080000000c00000011000000170000001e000000260000002f00000039000000
 --- !u!4 &923618955
 Transform:
   m_ObjectHideFlags: 0
@@ -687,9 +742,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89abd451aa6115841b072530985151da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefabs:
+  Prefabs:
   - {fileID: 9086103277784692525, guid: 36b94216e81d593418a5fe7b0713c6a8, type: 3}
-  - {fileID: 8832784972514768166, guid: 92f88f6e6fa7fc24aa83e9b732a1172d, type: 3}
+  - {fileID: 9202465114748994572, guid: 7f00d9830d3304245845fa6e650226d2, type: 3}
+  - {fileID: 3362516529741251404, guid: 746059c029657124b85f9a5d2caec5f3, type: 3}
 --- !u!4 &1015634043
 Transform:
   m_ObjectHideFlags: 0
@@ -720,6 +776,7 @@ GameObject:
   - component: {fileID: 1111410993}
   - component: {fileID: 1111410994}
   - component: {fileID: 1111410995}
+  - component: {fileID: 1111410996}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -817,13 +874,15 @@ Transform:
   m_GameObject: {fileID: 1111410988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 3.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1326148715}
   - {fileID: 1547860958}
   - {fileID: 1554619355}
+  - {fileID: 582333974}
+  - {fileID: 1184452059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1111410992
@@ -877,6 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   inputValue: {x: 0, y: 0}
+  Scan: {fileID: 0}
 --- !u!114 &1111410994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,6 +989,72 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1111410996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111410988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa3a577fbc42304e87cca57859b8cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  ScanRadius: 5
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!1 &1184452058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184452059}
+  - component: {fileID: 1184452060}
+  m_Layer: 0
+  m_Name: Weapon_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184452059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184452058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1111410991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184452060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184452058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1039aa10984c257468224ceee9dadb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 1
+  PrefabsId: 2
+  Count: 1
+  Damage: 5
+  Speed: 0
 --- !u!1 &1326148714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,7 +5669,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer: 0
+  Level: 0
   SpawnPoints: []
+  SpawnDatas:
+  - MonsterType: 0
+    Health: 10
+    SpawnTime: 1.5
+    Speed: 1
+  - MonsterType: 1
+    Health: 15
+    SpawnTime: 1.25
+    Speed: 1.5
+  - MonsterType: 2
+    Health: 20
+    SpawnTime: 1
+    Speed: 2
+  - MonsterType: 3
+    Health: 5
+    SpawnTime: 0.8
+    Speed: 2.5
+  - MonsterType: 4
+    Health: 5
+    SpawnTime: 0.5
+    Speed: 3
 --- !u!1 &1575331452
 GameObject:
   m_ObjectHideFlags: 0
@@ -5609,7 +5757,7 @@ Transform:
   m_GameObject: {fileID: 1575331452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 3.42, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

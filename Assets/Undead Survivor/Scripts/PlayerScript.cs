@@ -7,15 +7,17 @@ public class PlayerScript : MonoBehaviour
 {
     public float Speed;
     public Vector2 inputValue;
-    Rigidbody2D rb;
-    SpriteRenderer sr;
-    Animator at;
+    public ScannerScript Scan;
+    Rigidbody2D Rigid2D;
+    SpriteRenderer SpriteRen;
+    Animator Anim;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-        at = GetComponent<Animator>();
+        Rigid2D = GetComponent<Rigidbody2D>();
+        SpriteRen = GetComponent<SpriteRenderer>();
+        Anim = GetComponent<Animator>();
+        Scan = GetComponent<ScannerScript>();
     }
 
     void Start()
@@ -27,7 +29,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 NewVector2 = inputValue * Speed * Time.deltaTime;
-        rb.MovePosition(rb.position + NewVector2);
+        Rigid2D.MovePosition(Rigid2D.position + NewVector2);
     }
 
     void OnMove(InputValue Value)
@@ -39,9 +41,9 @@ public class PlayerScript : MonoBehaviour
     {
         if(inputValue.x != 0) 
         {
-            sr.flipX = inputValue.x < 0;
+            SpriteRen.flipX = inputValue.x < 0;
         }
 
-        at.SetFloat("PlayerSpeed", inputValue.magnitude);
+        Anim.SetFloat("PlayerSpeed", inputValue.magnitude);
     }
 }

@@ -432,12 +432,15 @@
 -analyzer:"C:/Program Files/Unity 2023.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity 2023.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity 2023.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/Undead Survivor/Scripts/EnemyPoolScript.cs"
+"Assets/Undead Survivor/Scripts/BulletScript.cs"
 "Assets/Undead Survivor/Scripts/EnemyScript.cs"
 "Assets/Undead Survivor/Scripts/GameManager.cs"
 "Assets/Undead Survivor/Scripts/PlayerScript.cs"
+"Assets/Undead Survivor/Scripts/PoolScript.cs"
 "Assets/Undead Survivor/Scripts/RepositionScript.cs"
+"Assets/Undead Survivor/Scripts/ScannerScript.cs"
 "Assets/Undead Survivor/Scripts/SpawnScript.cs"
+"Assets/Undead Survivor/Scripts/WeaponScript.cs"
 -langversion:9.0
 
 /deterministic
