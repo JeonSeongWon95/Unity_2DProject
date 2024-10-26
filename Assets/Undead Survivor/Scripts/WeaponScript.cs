@@ -15,11 +15,7 @@ public class WeaponScript : MonoBehaviour
 
     void Awake()
     {
-        Player = GetComponentInParent<PlayerScript>();
-    }
-    void Start()
-    {
-        Init();
+        Player = GameManager.Instance.Player;
     }
 
     public void LevelUp(float NewDamage, int NewCount) 
@@ -31,10 +27,15 @@ public class WeaponScript : MonoBehaviour
         {
             Batch();
         }
+
+        Player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
     void Update()
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         switch (Id)
         {
             case 0:
@@ -55,15 +56,27 @@ public class WeaponScript : MonoBehaviour
             default:
                 break;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            LevelUp(10, 2);
-        }
     }
 
-    public void Init() 
+    public void Init(ItemDataScriptableObject Data)
     {
+        name = "Weapon " + Data.ItemId;
+        transform.parent = Player.transform;
+        transform.localPosition = Vector3.zero;
+
+        Id = Data.ItemId;
+        Damage = Data.BaseDamage;
+        Count = Data.BaseCount;
+
+        for (int i = 0; i < GameManager.Instance.Pool.Prefabs.Length; i++)
+        {
+            if(Data.Projectile == GameManager.Instance.Pool.Prefabs[i]) 
+            {
+                PrefabsId = i;
+                break;
+            }
+        }
+
         switch (Id) 
         {
             case 0:
@@ -76,6 +89,12 @@ public class WeaponScript : MonoBehaviour
             default:
                 break;
         }
+
+        HandScript Hand = Player.GetComponentsInChildren<HandScript>(true)[(int)Data.Type];
+        Hand.gameObject.SetActive(true);
+        Hand.Sprite.sprite = Data.HandSprite;
+
+        Player.BroadcastMessage("ApplyGear",SendMessageOptions.DontRequireReceiver);
     }
 
     void Batch() 

@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     public float Speed;
     public float Health;
     public float MaxHealth;
-    public RuntimeAnimatorController[] rac;
+    public RuntimeAnimatorController[] RunTimeAC;
 
     WaitForFixedUpdate wait;
     bool IsLive;
@@ -29,6 +29,9 @@ public class EnemyScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         if (!(IsLive) || Anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
 
@@ -40,6 +43,9 @@ public class EnemyScript : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         if (!(IsLive))
             return;
 
@@ -66,11 +72,12 @@ public class EnemyScript : MonoBehaviour
     {
         Speed = NewData.Speed;
         MaxHealth = NewData.Health;
-        Anim.runtimeAnimatorController = rac[NewData.MonsterType];
+        Anim.runtimeAnimatorController = RunTimeAC[NewData.MonsterType];
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (!collision.CompareTag("Bullet") || !IsLive)
             return;
 

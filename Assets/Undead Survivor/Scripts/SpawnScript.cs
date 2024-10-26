@@ -17,8 +17,16 @@ public class SpawnScript : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         Timer += Time.deltaTime;
         Level = Mathf.FloorToInt(GameManager.Instance.GameTime / 10.0f);
+
+        if(Level > 4) 
+        {
+            Level = 4;
+        }
 
         if(Timer > SpawnDatas[Level].SpawnTime) 
         {

@@ -28,6 +28,7 @@ public class BulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (Per == -1 || !collision.CompareTag("Enemy"))
             return;
 

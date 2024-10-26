@@ -14,6 +14,9 @@ public class RepositionScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         if (!(collision.CompareTag("Area")))
             return;
 

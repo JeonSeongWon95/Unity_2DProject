@@ -11,6 +11,9 @@ public class ScannerScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         Targets = Physics2D.CircleCastAll(transform.position, ScanRadius, Vector2.zero, 0, TargetLayer);
         Target = FindNearEnemy();
     }

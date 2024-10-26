@@ -61,15 +61,23 @@
     <Analyzer Include="C:\Program Files\Unity 2023.2.1f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Undead Survivor\Scripts\LevelUpScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\RepositionScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\FollwPlayerScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\ScannerScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\ItemDataScriptableObject.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\SpawnScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\PoolScript.cs" />
     <Compile Include="Assets\Undead Survivor\Scripts\WeaponScript.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\HandScript.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\HUDScript.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\GameEndUIScript.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\ItemButtonScript.cs" />
+    <Compile Include="Assets\Undead Survivor\Scripts\GearScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

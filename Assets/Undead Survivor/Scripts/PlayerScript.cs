@@ -20,14 +20,12 @@ public class PlayerScript : MonoBehaviour
         Scan = GetComponent<ScannerScript>();
     }
 
-    void Start()
-    {
-        
-    }
-
 
     void FixedUpdate()
     {
+        if (GameManager.Instance.IsPause)
+            return;
+
         Vector2 NewVector2 = inputValue * Speed * Time.deltaTime;
         Rigid2D.MovePosition(Rigid2D.position + NewVector2);
     }
@@ -39,11 +37,38 @@ public class PlayerScript : MonoBehaviour
 
     void LateUpdate()
     {
-        if(inputValue.x != 0) 
+        if (GameManager.Instance.IsPause)
+            return;
+
+        if (inputValue.x != 0) 
         {
             SpriteRen.flipX = inputValue.x < 0;
         }
 
         Anim.SetFloat("PlayerSpeed", inputValue.magnitude);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (GameManager.Instance.IsPause)
+            return;
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.Instance.Health -= Time.deltaTime * 10.0f;
+
+            if (GameManager.Instance.Health <= 0)
+            {
+                Transform[] transforms = GetComponentsInChildren<Transform>();
+
+                for (int i = 2; i < transform.childCount; i++)
+                {
+                   transform.GetChild(i).gameObject.SetActive(false);
+                }
+
+                GameManager.Instance.GameOver();
+                Anim.SetTrigger("PlayerDead");
+            }
+        }
     }
 }
