@@ -51,10 +51,13 @@ public class GearScript : MonoBehaviour
             switch (Weapons[i].Id)
             {
                 case 0:
-                    Weapons[i].Speed = 150 + (150 * Rate);
+                    float Speed = 150 * CharacterScript.WeaponRate;
+                    Weapons[i].Speed = Speed + (Speed * Rate);
                     break;
+
                 case 1:
-                    Weapons[i].Speed = 0.5f * (1.0f - Rate);
+                    Speed = 0.5f * CharacterScript.WeaponSpeed;
+                    Weapons[i].Speed = Speed * (1.0f - Rate);
                     break;
                 default:
                     break;
@@ -66,6 +69,7 @@ public class GearScript : MonoBehaviour
 
     void SpeedUp()
     {
-        GameManager.Instance.Player.Speed = Rate;
+        float Speed = 3.0f * CharacterScript.Speed;
+        GameManager.Instance.Player.Speed = Speed + (Speed * Rate);
     }
 }

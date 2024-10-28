@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
     public LevelUpScript LevelUp;
     public GameEndUIScript EndUI;
     public GameObject EnemyCleaner;
+    public Transform JoyUI;
 
     [Header("#Player State")]
+    public int PlayerID;
     public int Level;
     public int Exp;
     public int Kill;
@@ -29,13 +31,18 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        Application.targetFrameRate = 60;
     }
 
-    public void GameStart()
+    public void GameStart(int NewPlayerID)
     {
+        PlayerID = NewPlayerID;
+        Player.gameObject.SetActive(true);
         Resume();
         Health = MaxHealth;
-        LevelUp.SeletItem(0);
+        LevelUp.SeletItem(PlayerID % 2);
+        AudioManager.instance.PlaySFX(AudioManager.SFX.Select);
+        AudioManager.instance.PlayBGM(true);
     }
 
     public void GameOver() 
@@ -46,9 +53,12 @@ public class GameManager : MonoBehaviour
     IEnumerator GameOverRoutine() 
     {
         IsPause = true;
+        
         yield return new WaitForSeconds(0.5f);
         EndUI.gameObject.SetActive(true);
         EndUI.Lose();
+        AudioManager.instance.PlaySFX(AudioManager.SFX.Lose);
+        AudioManager.instance.PlayBGM(false);
         Pasue();
     }
     public void GameWin()
@@ -63,7 +73,9 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        AudioManager.instance.PlaySFX(AudioManager.SFX.Win);
         EndUI.gameObject.SetActive(true);
+        AudioManager.instance.PlayBGM(false);
         EndUI.Win();
         Pasue();
     }
@@ -71,6 +83,11 @@ public class GameManager : MonoBehaviour
     public void GameRestart() 
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void GameQuit()
+    {
+        Application.Quit();
     }
 
     private void Update()
@@ -98,6 +115,7 @@ public class GameManager : MonoBehaviour
             Level++;
             LevelUp.Open();
             Exp = 0;
+            AudioManager.instance.PlaySFX(AudioManager.SFX.LevelUp);
         }
     }
 
@@ -105,11 +123,13 @@ public class GameManager : MonoBehaviour
     {
         IsPause = true;
         Time.timeScale = 0;
+        JoyUI.localScale = Vector3.zero;
     }
     public void Resume() 
     {
         IsPause = false;
         Time.timeScale = 1;
+        JoyUI.localScale = Vector3.one;
     }
 
 }

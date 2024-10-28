@@ -23,17 +23,18 @@ public class RepositionScript : MonoBehaviour
         Vector3 PlayerPosition = GameManager.Instance.Player.transform.position;
         Vector3 GroundPosition = transform.position;
 
-        float DistanceX = Mathf.Abs(PlayerPosition.x - GroundPosition.x);
-        float DistanceY = Mathf.Abs(PlayerPosition.y - GroundPosition.y);
-
-        Vector3 PlayerDirection = GameManager.Instance.Player.inputValue;
-        float DirectionX = PlayerDirection.x < 0 ? -1 : 1;
-        float DirectionY = PlayerDirection.y < 0 ? -1 : 1;
-
         switch (transform.tag) 
         {
             case "Ground":
-                if(DistanceX > DistanceY) 
+                float DistanceX = PlayerPosition.x - GroundPosition.x;
+                float DistanceY = PlayerPosition.y - GroundPosition.y;
+                float DirectionX = DistanceX < 0 ? -1 : 1;
+                float DirectionY = DistanceY < 0 ? -1 : 1;
+
+                DistanceX = Mathf.Abs(DistanceX);
+                DistanceY = Mathf.Abs(DistanceY);
+
+                if (DistanceX > DistanceY) 
                 {
                     transform.Translate(Vector3.right * DirectionX * 40);
                 }
@@ -46,8 +47,10 @@ public class RepositionScript : MonoBehaviour
             case "Enemy":
                 if (co2D.enabled) 
                 {
-                    transform.Translate(PlayerDirection * 20 + 
-                        new Vector3(Random.Range(-3.0f, 3.0f), Random.Range(-3.0f, 3.0f), 0));
+                    Vector3 NewPosition = PlayerPosition - GroundPosition;
+                    Vector3 RandomPosition = new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), 0);
+
+                    transform.Translate(RandomPosition + (NewPosition * 2));
                 }
                 break;
             default:

@@ -20,8 +20,8 @@ public class WeaponScript : MonoBehaviour
 
     public void LevelUp(float NewDamage, int NewCount) 
     {
-        Damage += NewDamage;
-        Count += NewCount;
+        Damage = NewDamage * CharacterScript.Damage;
+        Count = NewCount + CharacterScript.Count;
 
         if (Id == 0)
         {
@@ -65,8 +65,8 @@ public class WeaponScript : MonoBehaviour
         transform.localPosition = Vector3.zero;
 
         Id = Data.ItemId;
-        Damage = Data.BaseDamage;
-        Count = Data.BaseCount;
+        Damage = Data.BaseDamage * CharacterScript.Damage;
+        Count = Data.BaseCount + CharacterScript.Count;
 
         for (int i = 0; i < GameManager.Instance.Pool.Prefabs.Length; i++)
         {
@@ -80,11 +80,11 @@ public class WeaponScript : MonoBehaviour
         switch (Id) 
         {
             case 0:
-                Speed = 150;
+                Speed = 150 * CharacterScript.WeaponRate;
                 Batch();
                 break;
             case 1:
-                Speed = 0.3f;
+                Speed = 0.5f * CharacterScript.WeaponSpeed;
                 break;
             default:
                 break;
@@ -118,7 +118,7 @@ public class WeaponScript : MonoBehaviour
 
             SeletedTransform.Rotate(Vector3.forward * 360 * i / Count);
             SeletedTransform.Translate(SeletedTransform.up * 1.5f, Space.World);
-            SeletedTransform.GetComponent<BulletScript>().Init(Damage, -1); // -1은 관통이 무한임을 나타냄
+            SeletedTransform.GetComponent<BulletScript>().Init(Damage, -100); // -100은 관통이 무한임을 나타냄
         }
 
     }
@@ -135,5 +135,7 @@ public class WeaponScript : MonoBehaviour
         SeletedTransform.position = transform.position;
         SeletedTransform.rotation = Quaternion.FromToRotation(Vector3.up, Dir);
         SeletedTransform.GetComponent<BulletScript>().Init(Damage, Count, Dir);
+
+        AudioManager.instance.PlaySFX(AudioManager.SFX.Range);
     }
 }

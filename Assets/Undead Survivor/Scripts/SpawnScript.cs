@@ -9,10 +9,12 @@ public class SpawnScript : MonoBehaviour
     public int Level;
     public Transform[] SpawnPoints;
     public SpawnData[] SpawnDatas;
+    public float LevelTime;
 
     void Awake()
     {
         SpawnPoints = GetComponentsInChildren<Transform>();
+        LevelTime = GameManager.Instance.MaxGameTime / SpawnDatas.Length;
     }
 
     void Update()
@@ -21,7 +23,7 @@ public class SpawnScript : MonoBehaviour
             return;
 
         Timer += Time.deltaTime;
-        Level = Mathf.FloorToInt(GameManager.Instance.GameTime / 10.0f);
+        Level = Mathf.FloorToInt(GameManager.Instance.GameTime / LevelTime);
 
         if(Level > 4) 
         {

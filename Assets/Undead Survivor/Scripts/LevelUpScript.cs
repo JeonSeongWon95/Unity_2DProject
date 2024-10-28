@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class LevelUpScript : MonoBehaviour
 {
@@ -27,12 +26,15 @@ public class LevelUpScript : MonoBehaviour
         {
             RectTr.localScale = Vector3.one;
             GameManager.Instance.Pasue();
+            AudioManager.instance.AddEffects(true);
         }
     }
     public void Close()
     {
         RectTr.localScale = Vector3.zero;
         GameManager.Instance.Resume();
+        AudioManager.instance.PlaySFX(AudioManager.SFX.Select);
+        AudioManager.instance.AddEffects(false);
     }
 
     public bool ChoseItems() 

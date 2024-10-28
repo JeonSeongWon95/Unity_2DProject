@@ -8,9 +8,13 @@ public class PlayerScript : MonoBehaviour
     public float Speed;
     public Vector2 inputValue;
     public ScannerScript Scan;
+    public RuntimeAnimatorController[] RuntimeAnimC;
+
     Rigidbody2D Rigid2D;
     SpriteRenderer SpriteRen;
     Animator Anim;
+
+    
 
     private void Awake()
     {
@@ -18,6 +22,12 @@ public class PlayerScript : MonoBehaviour
         SpriteRen = GetComponent<SpriteRenderer>();
         Anim = GetComponent<Animator>();
         Scan = GetComponent<ScannerScript>();
+    }
+
+    private void OnEnable()
+    {
+        Anim.runtimeAnimatorController = RuntimeAnimC[GameManager.Instance.PlayerID];
+        Speed *= CharacterScript.Speed;
     }
 
 

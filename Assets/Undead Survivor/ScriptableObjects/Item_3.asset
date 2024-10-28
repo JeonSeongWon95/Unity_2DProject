@@ -20,11 +20,11 @@ MonoBehaviour:
   BaseDamage: 2
   BaseCount: 0
   Damages:
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
+  - 0.1
+  - 0.3
+  - 0.5
+  - 0.7
+  - 0.9
   Counts: 0000000000000000000000000000000000000000
   Projectile: {fileID: 0}
   HandSprite: {fileID: 0}

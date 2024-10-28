@@ -20,7 +20,7 @@ public class BulletScript : MonoBehaviour
         this.Damage = NewDamage;
         this.Per = NewPer;
 
-        if(Per > -1) 
+        if(Per >= 0) 
         {
             Rigid.velocity = Dir * 15f;
         }
@@ -29,16 +29,24 @@ public class BulletScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (Per == -1 || !collision.CompareTag("Enemy"))
+        if (Per == -100 || !collision.CompareTag("Enemy"))
             return;
 
         Per--;
 
-        if(Per == -1) 
+        if(Per >= -1) 
         {
             Rigid.velocity = Vector3.zero;
             gameObject.SetActive(false);
         }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Area") || Per == -100)
+            return;
+
+        gameObject.SetActive(false);
     }
 
 }

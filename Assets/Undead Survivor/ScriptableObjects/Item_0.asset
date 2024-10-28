@@ -21,10 +21,10 @@ MonoBehaviour:
   BaseCount: 1
   Damages:
   - 0.5
-  - 0.8
-  - 1.2
-  - 1.8
-  - 3
-  Counts: 0100000001000000010000000200000002000000
+  - 1.5
+  - 2.5
+  - 3.5
+  - 8
+  Counts: 020000000300000004000000060000000a000000
   Projectile: {fileID: 9202465114748994572, guid: 7f00d9830d3304245845fa6e650226d2, type: 3}
   HandSprite: {fileID: 143021600, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}

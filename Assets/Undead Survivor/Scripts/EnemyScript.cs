@@ -94,10 +94,16 @@ public class EnemyScript : MonoBehaviour
             Anim.SetBool("Dead", true);
             GameManager.Instance.Kill++;
             GameManager.Instance.AddExp();
+
+            if (!GameManager.Instance.IsPause)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.SFX.Dead);
+            }
         }
         else 
         {
             Anim.SetTrigger("Hit");
+            AudioManager.instance.PlaySFX(AudioManager.SFX.Hit);
         }
     }
 
