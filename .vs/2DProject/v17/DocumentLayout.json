@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "M:\\Game\\Unity\\2DProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\follwplayerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\follwplayerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\gameenduiscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\gameenduiscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\hudscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\hudscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\handscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\handscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\characterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\characterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\enemyscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\enemyscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\achievemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\achievemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\itembuttonscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\itembuttonscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\levelupscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\levelupscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\gearscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\gearscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\bulletscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\bulletscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\weaponscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\weaponscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\itemdatascriptableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\itemdatascriptableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\poolscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\poolscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|m:\\game\\unity\\2dproject\\assets\\undead survivor\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F478B2A-144D-827E-BDBC-CD6D9B431814}|Assembly-CSharp.csproj|solutionrelative:assets\\undead survivor\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HUDScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\HUDScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\HUDScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\HUDScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\HUDScript.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowB8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:07:10.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameEndUIScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\GameEndUIScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\GameEndUIScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\GameEndUIScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\GameEndUIScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:06:57.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FollwPlayerScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\FollwPlayerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\FollwPlayerScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\FollwPlayerScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\FollwPlayerScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:05:43.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CharacterScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\CharacterScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\CharacterScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\CharacterScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\CharacterScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:03:33.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\EnemyScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\EnemyScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\EnemyScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\EnemyScript.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAuwG0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:41:46.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemButtonScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\ItemButtonScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\ItemButtonScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\ItemButtonScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\ItemButtonScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:13:44.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LevelUpScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\LevelUpScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\LevelUpScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\LevelUpScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\LevelUpScript.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAcwEIAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:40:26.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HandScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\HandScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\HandScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\HandScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\HandScript.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:38:45.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GearScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\GearScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\GearScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\GearScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\GearScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:38:42.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WeaponScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\WeaponScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\WeaponScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\WeaponScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\WeaponScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:38:22.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ItemDataScriptableObject.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\ItemDataScriptableObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\ItemDataScriptableObject.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\ItemDataScriptableObject.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\ItemDataScriptableObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:33:45.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\AudioManager.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\AudioManager.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwFIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:05:40.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AchieveManager.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\AchieveManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\AchieveManager.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\AchieveManager.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\AchieveManager.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAADgv1AAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:36:42.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PoolScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\PoolScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\PoolScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\PoolScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\PoolScript.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:22:21.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BulletScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\BulletScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\BulletScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\BulletScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\BulletScript.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:13:05.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\GameManager.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\GameManager.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAswBgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:01:36.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PlayerScript.cs",
+              "DocumentMoniker": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\PlayerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Undead Survivor\\Scripts\\PlayerScript.cs",
+              "ToolTip": "M:\\Game\\Unity\\2DProject\\Assets\\Undead Survivor\\Scripts\\PlayerScript.cs",
+              "RelativeToolTip": "Assets\\Undead Survivor\\Scripts\\PlayerScript.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T03:43:25.242Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -80,15 +80,7 @@ public class AudioManager : MonoBehaviour
 
     public void AddEffects(bool IsPlaying)
     {
-        if (IsPlaying)
-        {
-            BGMFilter.enabled = true;
-        }
-        else
-        {
-            BGMFilter.enabled = false;
-        }
-
+        BGMFilter.enabled = IsPlaying;
     }
 
     public void PlaySFX(SFX sfx) 

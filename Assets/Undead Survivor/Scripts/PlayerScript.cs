@@ -36,8 +36,9 @@ public class PlayerScript : MonoBehaviour
         if (GameManager.Instance.IsPause)
             return;
 
-        Vector2 NewVector2 = inputValue * Speed * Time.deltaTime;
+        Vector2 NewVector2 = inputValue * Speed * Time.fixedDeltaTime;
         Rigid2D.MovePosition(Rigid2D.position + NewVector2);
+
     }
 
     void OnMove(InputValue Value)
@@ -58,7 +59,7 @@ public class PlayerScript : MonoBehaviour
         Anim.SetFloat("PlayerSpeed", inputValue.magnitude);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (GameManager.Instance.IsPause)
             return;
